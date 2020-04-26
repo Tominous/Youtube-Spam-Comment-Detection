@@ -31,8 +31,8 @@ def predict():
 	clf.fit(X_train,y_train)
 	clf.score(X_test,y_test)
 	#Alternative Usage of Saved Model
-	# ytb_model = open("naivebayes_spam_model.pkl","rb")
-	# clf = joblib.load(ytb_model)
+	 ytb_model = open("naivebayes_spam_model.pkl","rb")
+	 clf = joblib.load(ytb_model)
 
 	if request.method == 'POST':
 		comment = request.form['comment']
